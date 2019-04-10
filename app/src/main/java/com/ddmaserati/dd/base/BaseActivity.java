@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.ddmaserati.dd.utlis.AppManager;
 import com.ddmaserati.dd.utlis.GlideImageLoader;
+import com.ddmaserati.dd.widget.LoadingDialog;
 
 import butterknife.ButterKnife;
 
@@ -61,4 +62,17 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * 显示加载中
+     */
+    public void showLoading() {
+        LoadingDialog.showLoading(this);
+    }
+
+    /**
+     * 隐藏加载中
+     */
+    public void hideLoading() {
+        LoadingDialog.hideLoading();
+    }
 }

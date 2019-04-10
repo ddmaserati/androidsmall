@@ -5,6 +5,7 @@ import android.content.Intent;
 
 import com.ddmaserati.dd.R;
 import com.ddmaserati.dd.base.BaseActivity;
+import com.ddmaserati.dd.widget.LoadingDialog;
 
 public class MainActivity extends BaseActivity {
 
