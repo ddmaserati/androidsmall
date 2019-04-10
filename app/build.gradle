@@ -12,7 +12,7 @@ android {
         targetSdkVersion android.targetSdkVersion
         versionCode android.versionCode
         versionName android.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
     buildTypes {
@@ -31,7 +31,6 @@ dependencies {
     implementation rootProject.ext.dependencies["support-v4"]
     implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["constraint-layout"]
-    implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["rxandroid"]
     implementation rootProject.ext.dependencies["rxjava"]
     implementation rootProject.ext.dependencies["gson"]
@@ -42,6 +41,9 @@ dependencies {
     implementation rootProject.ext.dependencies["butterknife"]
     implementation rootProject.ext.dependencies["glide"]
     implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["design"]
+
+
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
   

@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+
 /**
  * dec:  基础app
  * Created by ddmaserati
@@ -17,6 +18,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         mApplication = this;
+
     }
 
     @Override
@@ -25,8 +27,7 @@ public class MyApplication extends Application {
         MultiDex.install(this);
     }
 
-    public static MyApplication getInstance()
-    {
+    public static MyApplication getInstance() {
         return mApplication;
     }
 }

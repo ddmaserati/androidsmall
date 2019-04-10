@@ -2,7 +2,7 @@ ext {
     android = [
             application      : "com.ddmaserati.dd",
             compileSdkVersion: 26,        //compileSdkVersion 26
-            buildToolsVersion: "28.0.2",  //buildToolsVersion "25.0.2"
+            buildToolsVersion: "27.0.3",  //buildToolsVersion "25.0.2"
             minSdkVersion    : 19,            //minSdkVersion 14
             targetSdkVersion : 26,         //targetSdkVersion 26
             versionCode      : 1,               //versionCode 1
@@ -11,9 +11,9 @@ ext {
 
 
     dependencies = [
-            "support-v4"  : 'com.android.support:support-v4:28.0.0',
-            "appcompat-v7": 'com.android.support:appcompat-v7:28.+',
-
+            "support-v4"       : 'com.android.support:support-v4:27.1.0',
+            "appcompat-v7"     : 'com.android.support:appcompat-v7:27.1.0',
+            "design"           : 'com.android.support:design:27.1.0',
             "gson"             : 'com.google.code.gson:gson:2.8.0',
             "rxandroid"        : 'io.reactivex:rxandroid:1.2.1',
             "rxjava"           : 'io.reactivex:rxjava:1.2.4',
@@ -23,8 +23,8 @@ ext {
             "adapter-rxjava"   : 'com.squareup.retrofit2:adapter-rxjava:2.1.0',
             "butterknife"      : 'com.jakewharton:butterknife:8.8.1',
             "eventbus"         : 'org.greenrobot:eventbus:3.0.0',
-            "glide": 'com.github.bumptech.glide:glide:4.7.1',
-            "multidex" :'com.android.support:multidex:1.0.0'
+            "glide"            : 'com.github.bumptech.glide:glide:4.7.1',
+            "multidex"         : 'com.android.support:multidex:1.0.0'
 
 
     ]
