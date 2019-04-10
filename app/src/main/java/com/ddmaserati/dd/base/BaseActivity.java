@@ -5,6 +5,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.ddmaserati.dd.utlis.AppManager;
+import com.ddmaserati.dd.utlis.GlideImageLoader;
+
+import butterknife.ButterKnife;
 
 /**
  * dec: 基础activity
@@ -24,26 +27,31 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setSeting();
         setContentView(getLayout());
+        ButterKnife.bind(this);
         initView();
         initData();
-
     }
 
     @Override
     public void onLowMemory() {
         super.onLowMemory();
+        GlideImageLoader.lowMemory(this);
     }
 
     @Override
     public void onTrimMemory(int level) {
         super.onTrimMemory(level);
+        if (level == TRIM_MEMORY_UI_HIDDEN) {
+            GlideImageLoader.lowMemory(this);
+        }
+        GlideImageLoader.trimMemory(this, level);
     }
 
     @Override
     protected void onDestroy() {
+
         super.onDestroy();
         AppManager.getInstance().removeActivity(this);
     }
@@ -51,4 +59,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     private void setSeting() {
         AppManager.getInstance().addActivity(this);
     }
+
+
 }
