@@ -20,7 +20,6 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-
     @BindView(R.id.frame_layout)
     FrameLayout frameLayout;
     @BindView(R.id.navigation)
