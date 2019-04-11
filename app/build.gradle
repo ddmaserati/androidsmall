@@ -42,6 +42,7 @@ dependencies {
     implementation rootProject.ext.dependencies["glide"]
     implementation rootProject.ext.dependencies["multidex"]
     implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["baseadapter"]
 
 
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
