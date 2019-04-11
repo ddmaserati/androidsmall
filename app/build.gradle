@@ -43,7 +43,7 @@ dependencies {
     implementation rootProject.ext.dependencies["multidex"]
     implementation rootProject.ext.dependencies["design"]
     implementation rootProject.ext.dependencies["baseadapter"]
-
+    implementation rootProject.ext.dependencies["litepal"]
 
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'

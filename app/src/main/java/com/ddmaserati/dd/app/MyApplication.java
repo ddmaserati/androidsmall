@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import org.litepal.LitePal;
+
 
 /**
  * dec:  基础app
@@ -19,6 +21,8 @@ public class MyApplication extends Application {
         super.onCreate();
         mApplication = this;
 
+        // 初始化LitePal数据库
+      //  LitePal.initialize(this);
     }
 
     @Override

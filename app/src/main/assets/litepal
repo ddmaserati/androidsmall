@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<litepal>
+    <dbname value="dddemo"/>
+    <version value="1"/><!-- 每次只要数据库发生变动， 版本号version都必须加1 -->
+
+    <list>
+      <!--  <mapping class="UserInfo"></mapping> -->
+    </list>
+
+    <storage value="dd/database"></storage> <!-- 数据库地址 -->
+</litepal>
