@@ -1,0 +1,32 @@
+ext {
+    android = [
+            application      : "com.ddmaserati.dd",
+            compileSdkVersion: 26,        //compileSdkVersion 26
+            buildToolsVersion: "27.0.3",  //buildToolsVersion "25.0.2"
+            minSdkVersion    : 19,            //minSdkVersion 14
+            targetSdkVersion : 26,         //targetSdkVersion 26
+            versionCode      : 1,               //versionCode 1
+            versionName      : "1.0"            //versionName "1.0"
+    ]
+
+
+    dependencies = [
+            "support-v4"       : 'com.android.support:support-v4:27.1.0',
+            "appcompat-v7"     : 'com.android.support:appcompat-v7:27.1.0',
+            "design"           : 'com.android.support:design:27.1.0',
+            "gson"             : 'com.google.code.gson:gson:2.8.0',
+            "rxandroid"        : 'io.reactivex:rxandroid:1.2.1',
+            "rxjava"           : 'io.reactivex:rxjava:1.2.4',
+            "constraint-layout": 'com.android.support.constraint:constraint-layout:1.0.2',
+            "retrofit"         : 'com.squareup.retrofit2:retrofit:2.2.0',
+            "converter-gson"   : 'com.squareup.retrofit2:converter-gson:2.2.0',
+            "adapter-rxjava"   : 'com.squareup.retrofit2:adapter-rxjava:2.1.0',
+            "butterknife"      : 'com.jakewharton:butterknife:8.8.1',
+            "eventbus"         : 'org.greenrobot:eventbus:3.0.0',
+            "glide"            : 'com.github.bumptech.glide:glide:4.7.1',
+            "multidex"         : 'com.android.support:multidex:1.0.0',
+            "baseadapter"      : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22',
+            "litepal"          : 'org.litepal.android:core:1.6.1'
+
+    ]
+}
