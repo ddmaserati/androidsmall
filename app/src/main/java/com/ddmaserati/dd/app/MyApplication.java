@@ -4,6 +4,9 @@ import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
+import com.tencent.tinker.loader.app.TinkerApplication;
+import com.tencent.tinker.loader.shareutil.ShareConstants;
+
 import org.litepal.LitePal;
 
 
@@ -12,9 +15,14 @@ import org.litepal.LitePal;
  * Created by ddmaserati
  * on 2019/4/9.
  */
-public class MyApplication extends Application {
+public class MyApplication extends TinkerApplication {
 
     private static MyApplication mApplication;
+
+    public MyApplication() {
+        super(ShareConstants.TINKER_ENABLE_ALL, "com.ddmaserati.dd.app.SampleApplicationLike",
+                "com.tencent.tinker.loader.TinkerLoader", false);
+    }
 
     @Override
     public void onCreate() {
@@ -22,7 +30,7 @@ public class MyApplication extends Application {
         mApplication = this;
 
         // 初始化LitePal数据库
-      //  LitePal.initialize(this);
+        LitePal.initialize(this);
     }
 
     @Override
