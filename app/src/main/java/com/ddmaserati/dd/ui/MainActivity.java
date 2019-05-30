@@ -16,7 +16,6 @@ import com.ddmaserati.dd.ui.fragment.HomeFragment;
 import com.ddmaserati.dd.ui.fragment.ProfileFragment;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
