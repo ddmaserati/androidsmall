@@ -1,17 +1,13 @@
 package com.ddmaserati.dd.ui;
 
-import android.content.SharedPreferences;
-import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.ddmaserati.dd.R;
 import com.ddmaserati.dd.base.BaseActivity;
 import com.ddmaserati.dd.utlis.AppManager;
 import com.ddmaserati.dd.utlis.SharePreUtil;
-import com.ddmaserati.dd.utlis.ToastUtils;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * dec:  启动图

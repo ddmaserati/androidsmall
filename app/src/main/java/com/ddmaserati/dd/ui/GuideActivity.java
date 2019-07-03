@@ -2,21 +2,10 @@ package com.ddmaserati.dd.ui;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.ddmaserati.dd.R;
 import com.ddmaserati.dd.base.BaseActivity;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import butterknife.BindView;
 
 /**
  * dec:  引导图
