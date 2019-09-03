@@ -14,7 +14,7 @@ import com.tencent.tinker.loader.app.DefaultApplicationLike;
 
 
 /**
- * dec:  tinker 配置文件
+ * dec:  tinker 配置文件 勿删（tinker需要）
  * Created by ddmaserati
  * on 2019/5/19.
  */

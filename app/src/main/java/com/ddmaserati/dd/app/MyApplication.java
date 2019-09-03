@@ -1,6 +1,5 @@
 package com.ddmaserati.dd.app;
 
-import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDex;
 
@@ -19,6 +18,7 @@ public class MyApplication extends TinkerApplication {
 
     private static MyApplication mApplication;
 
+    // 配置tinker热更新
     public MyApplication() {
         super(ShareConstants.TINKER_ENABLE_ALL, "com.ddmaserati.dd.app.SampleApplicationLike",
                 "com.tencent.tinker.loader.TinkerLoader", false);
