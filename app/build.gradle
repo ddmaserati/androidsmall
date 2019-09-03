@@ -54,6 +54,7 @@ dependencies {
     implementation rootProject.ext.dependencies["tinker-android"]
     implementation rootProject.ext.dependencies["nativecrashreport"]
     implementation rootProject.ext.dependencies["crashreport"]
+    implementation rootProject.ext.dependencies["okhttp3"]
 
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
