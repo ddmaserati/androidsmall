@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.ddmaserati.dd.R;
 import com.ddmaserati.dd.utlis.AppManager;
 import com.ddmaserati.dd.utlis.GlideImageLoader;
+import com.ddmaserati.dd.utlis.StatusBarHelp;
 import com.ddmaserati.dd.widget.LoadingDialog;
 
 import butterknife.ButterKnife;
@@ -30,6 +32,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setSeting();
         setContentView(getLayout());
+        setStatusBar();
         ButterKnife.bind(this);
         initView();
         initData();
@@ -74,5 +77,11 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     public void hideLoading() {
         LoadingDialog.hideLoading();
+    }
+
+    private void setStatusBar()
+    {
+
+//        StatusBarHelp.setStatusBar(this,true, R.color.colorAccent, R.color.colorAccent);
     }
 }
