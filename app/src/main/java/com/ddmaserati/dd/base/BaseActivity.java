@@ -8,6 +8,7 @@ import com.ddmaserati.dd.R;
 import com.ddmaserati.dd.utlis.AppManager;
 import com.ddmaserati.dd.utlis.GlideImageLoader;
 import com.ddmaserati.dd.utlis.StatusBarHelp;
+import com.ddmaserati.dd.utlis.ToastUtils;
 import com.ddmaserati.dd.widget.LoadingDialog;
 
 import butterknife.ButterKnife;
@@ -25,6 +26,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     public abstract void initView();
 
     public abstract void initData();
+
+    private long firstTime = 0;
 
 
     @Override
@@ -83,5 +86,16 @@ public abstract class BaseActivity extends AppCompatActivity {
     {
 
 //        StatusBarHelp.setStatusBar(this,true, R.color.colorAccent, R.color.colorAccent);
+    }
+
+    public void exit()
+    {
+        long secondTime = System.currentTimeMillis();
+        if (secondTime - firstTime > 2000) {
+            ToastUtils.shortToast("再按一次退出程序");
+            firstTime = secondTime;
+        } else {
+           AppManager.getInstance().removeAll();
+        }
     }
 }
