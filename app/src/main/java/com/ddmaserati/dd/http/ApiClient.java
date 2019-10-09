@@ -47,11 +47,11 @@ public class ApiClient {
                 builder.addInterceptor(loggingInterceptor);
             }
             OkHttpClient okHttpClient = builder.build();
-
             mRetrofit = new Retrofit.Builder()
                     .baseUrl(ServerConfig.BASEURL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+
                     .client(okHttpClient)
                     .build();
         }
