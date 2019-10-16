@@ -1,8 +1,18 @@
 package com.ddmaserati.dd.app;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.multidex.MultiDex;
 
+import com.ddmaserati.dd.R;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
+import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;
+import com.scwang.smartrefresh.layout.api.RefreshFooter;
+import com.scwang.smartrefresh.layout.api.RefreshHeader;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
+import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.tencent.tinker.loader.app.TinkerApplication;
 import com.tencent.tinker.loader.shareutil.ShareConstants;
 
@@ -22,6 +32,25 @@ public class MyApplication extends TinkerApplication {
     public MyApplication() {
         super(ShareConstants.TINKER_ENABLE_ALL, "com.ddmaserati.dd.app.SampleApplicationLike",
                 "com.tencent.tinker.loader.TinkerLoader", false);
+    }
+
+    static {
+        SmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
+            @NonNull
+            @Override
+            public RefreshHeader createRefreshHeader(@NonNull Context context, @NonNull RefreshLayout layout) {
+                layout.setPrimaryColorsId(R.color.color_f8f8f8);
+                return new ClassicsHeader(context);
+            }
+        });
+
+        SmartRefreshLayout.setDefaultRefreshFooterCreator(new DefaultRefreshFooterCreator() {
+            @NonNull
+            @Override
+            public RefreshFooter createRefreshFooter(@NonNull Context context, @NonNull RefreshLayout layout) {
+                return new ClassicsFooter(context);
+            }
+        });
     }
 
     @Override
